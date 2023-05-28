@@ -80,7 +80,7 @@ int main()
 */
 
 //Inverted Half Pyramid pattern:
-#include <bits/stdc++.h>
+/*#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -97,6 +97,130 @@ int main()
             cout<<"*";
         }
         cout<<endl;
+    }
+    return 0;
+}
+*/
+
+//Half Pyramid pattern after 180 degree Rotation:
+/*#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+
+    for( int row=1; row<=n; row++)
+    {
+        for (int col=1; col<=n; col++)//____ [col= column] 
+        {
+            if(col<=n-row) //
+            {
+                cout<<" ";
+            }
+            else
+            {
+                cout<<"*";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+*/
+
+// Number Half Pyramid:
+/*#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the number which denotes height of your Pyramid :";
+    cin>>n;
+
+    for(int row=1;row<=n;row++)
+    {
+        for (int col=1; col<=row;col++)
+        {
+            cout<<row;
+        }
+        cout<<endl;
+    }
+    return 0;
+}*/
+
+//Floyd Pyramid:
+/*#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,count=1;
+    cout<<"Enter a number which denotes height of your Pyramid:";
+    cin>>n;
+
+    for (int row=1; row<=n; row++)
+    {
+        for (int col=1; col<=row; col++)
+        {
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+*/
+
+//____" Butter Fly "___:
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter a number which will denote your Butter Fly size:";
+    cin>>n;
+
+    for(int row=1;row<=n;row++)
+    {
+        for (int col=1; col<=row; col++)
+        {
+            cout<<"*";
+        }
+
+        int space = 2*n - 2*row;
+
+        for (int col=1; col<=space; col++)
+        {
+            cout<<" ";
+        }
+
+        for (int col=1; col<=row; col++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+//Mirroring of our Upper code :
+    for (int row=n; row>=1; row--)
+    {
+        for (int col=1; col<=row; col++)
+        {
+            cout<<"*";
+        }
+
+        int space = 2*n - 2*row;
+
+        for (int col=1; col<=space; col++)
+        {
+            cout<<" ";
+        }
+
+    for (int col=1; col<=row; col++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;    
     }
     return 0;
 }
